@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MiRanch</title>
+<!-- MiRanch: fase de endurecimiento y ahorro de sincronización -->
+<link href="./manifest.json" rel="manifest"/>
+<meta content="#1F3A2E" name="theme-color"/>
+<link href="./icon-miranch.png" rel="icon" type="image/png"/>
+<link href="./apple-touch-icon.png" rel="apple-touch-icon"/>
+<style id="tailwind-compilado">
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.bottom-0{bottom:0}.bottom-2{bottom:.5rem}.bottom-24{bottom:6rem}.left-0{left:0}.left-1\/2{left:50%}.right-0{right:0}.right-5{right:1.25rem}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.z-\[60\]{z-index:60}.col-span-2{grid-column:span 2/span 2}.my-3{margin-top:.75rem;margin-bottom:.75rem}.-mt-2{margin-top:-.5rem}.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:.25rem}.ml-auto{margin-left:auto}.mr-1{margin-right:.25rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-1\.5{height:.375rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2\.5{height:.625rem}.h-20{height:5rem}.h-24{height:6rem}.h-3{height:.75rem}.h-32{height:8rem}.h-8{height:2rem}.h-9{height:2.25rem}.min-h-screen{min-height:100vh}.w-1\.5{width:.375rem}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-2\.5{width:.625rem}.w-20{width:5rem}.w-24{width:6rem}.w-3{width:.75rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-full{width:100%}.min-w-0{min-width:0}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.grid-cols-7{grid-template-columns:repeat(7,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-0\.5{gap:.125rem}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-x-3{-moz-column-gap:.75rem;column-gap:.75rem}.gap-x-4{-moz-column-gap:1rem;column-gap:1rem}.gap-y-1{row-gap:.25rem}.gap-y-4{row-gap:1rem}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.rounded-t-3xl{border-top-left-radius:1.5rem;border-top-right-radius:1.5rem}.rounded-t-\[32px\]{border-top-left-radius:32px;border-top-right-radius:32px}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.object-contain{-o-object-fit:contain;object-fit:contain}.object-cover{-o-object-fit:cover;object-fit:cover}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-1{padding-bottom:.25rem}.pb-10{padding-bottom:2.5rem}.pb-28{padding-bottom:7rem}.pb-4{padding-bottom:1rem}.pt-1{padding-top:.25rem}.pt-2{padding-top:.5rem}.pt-3{padding-top:.75rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-tight{line-height:1.25}.tracking-wide{letter-spacing:.025em}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.opacity-70{opacity:.7}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-150,.transition-transform{transition-duration:.15s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem}.hover\:-translate-y-0\.5:hover,.hover\:-translate-y-1:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem}.hover\:bg-white\/10:hover{background-color:hsla(0,0%,100%,.1)}.active\:scale-90:active{--tw-scale-x:.9;--tw-scale-y:.9}.active\:scale-90:active,.active\:scale-95:active{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95}.active\:scale-\[0\.98\]:active{--tw-scale-x:0.98;--tw-scale-y:0.98;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script>
+  // Clave de Google Maps (opcional). Solo se usa si el productor pulsa "Usar Google Maps"
+  // en el módulo de potreros — no se carga nada de Google Maps por defecto.
+  // Crea una clave gratuita/con facturación de bajo costo en https://console.cloud.google.com/google/maps-apis
+  // y pégala aquí. Mientras esté vacía, ese botón mostrará un aviso.
+  const GOOGLE_MAPS_API_KEY = '';
+  // Fondo único de MiRanch: sin rotación semanal para evitar descargar
+  // cuatro portadas cuando el usuario solo necesita una.
+  const FONDO_HOME_DEFAULT = './iranch-modular/assets/home-semana-4.webp';
+
+  function aplicarFondoLoginInicial(){
+    var pantalla = document.getElementById('screen-login');
+    if (!pantalla) return;
+    var fondo = (window.estado && window.estado.configuracion && window.estado.configuracion.fondoHome) || FONDO_HOME_DEFAULT;
+    pantalla.style.backgroundImage = "url('" + fondo + "')";
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', aplicarFondoLoginInicial);
+  } else {
+    aplicarFondoLoginInicial();
+  }
+  // Encabezado único: amanecer panorámico, logo horizontal, ESP y Salir.
+  const LOGO_HORIZONTAL_DEFAULT = './iranch-modular/assets/logo-miranch-horizontal.png';
+  const LOGO_VERTICAL_DEFAULT = './iranch-modular/assets/logo-miranch-vertical.png';
+  const LOGO_QUESERIA_B64 = LOGO_HORIZONTAL_DEFAULT;
+  const FONDO_HEADER_DEFAULT = './iranch-modular/assets/header-sunrise.webp';
+  function aplicarFondoHeaderProductor(){
+    var header = document.getElementById('header-productor');
+    if (!header) return;
+    var fondo = (window.estado && window.estado.configuracion && window.estado.configuracion.fondoHeader) || FONDO_HEADER_DEFAULT;
+    header.style.backgroundImage = "url('" + fondo + "')";
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', aplicarFondoHeaderProductor);
+  } else {
+    aplicarFondoHeaderProductor();
+  }
+</script>
+<script src="./iranch-modular/modules/firebase-bootstrap.js" type="module"></script>
+    <script src="./iranch-modular/modules/core/telemetry.js"></script>
+<script src="./iranch-modular/modules/view-loader.js" type="module"></script>
+<script src="./iranch-modular/modules/core/module-contracts.js"></script>
+<script src="./iranch-modular/modules/module-loader.js"></script>
+<style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap');
+:root{
+--pine:#1A2E1A;
+--parchment:#FDF8F0;
+--ink:#211E19;
+--sage:#5C6B55;
+--line:#E8DCC6;
+--slate:#334155;
+--slate-d:#1E293B;
+--orange:#C86B3C; --orange-d:#A8542E;
+--cuero:#5C4033;
+--hoja-oscura:#2F4F2F;
+--beige-vaquero:#D2B48C;
+--red:#EF4444; --red-d:#B91C1C;
+--yellow:#F59E0B; --yellow-d:#B45309;
+--green:#16A34A; --green-d:#15803D;
+--blue:#2563EB; --blue-d:#1D4ED8;
+--purple:#7C3AED; --purple-d:#6D28D9;
+--pink:#DB2777; --pink-d:#BE185D;
+--teal:#0D9488; --teal-d:#0F766E;
+}
+*{ box-sizing:border-box; }
+html{ font-size:18px; }
+body{ font-family:'Inter', sans-serif; background:var(--parchment); color:var(--ink); }
+.font-display{ font-family:'Fraunces', serif; }
+.screen{ display:none; }
+.screen:not(.active){ display:none !important; }
+.screen.active{ display:block; }
+#overlay-suscripcion-vencida.hidden,
+#modal-exportar.hidden,
+#modal-conflicto-arete.hidden,
+#modal-ajustar-esquinas.hidden,
+#modal-dibujar-fierro.hidden,
+#badge-chat-productor.hidden,
+#badge-confirmaciones-pago-pendientes.hidden,
+#badge-chat-admin.hidden{ display:none !important; }
+.fabs-ocultos-temporalmente{ display:none !important; }
+.tile{
+display:flex; flex-direction:column; justify-content:space-between;
+min-height:92px; padding:.85rem; border-radius:22px; color:#fff;
+font-weight:800; font-size:.95rem;
+box-shadow:0 10px 20px -8px rgba(0,0,0,0.28);
+transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+text-align:left; cursor:pointer; -webkit-tap-highlight-color:transparent;
+border:2px solid rgba(255,255,255,0.12);
+position:relative; overflow:hidden;
+}
+.tile-fondo{
+position:absolute; inset:0; background-size:cover; background-position:center;
+-webkit-mask-image:radial-gradient(circle at 70% 30%, black 35%, transparent 72%);
+mask-image:radial-gradient(circle at 70% 30%, black 35%, transparent 72%);
+opacity:.9;
+}
+.tile .icono, .tile > span:not(.tile-fondo){ position:relative; z-index:1; }
+.tile:hover{ transform:translateY(-3px); box-shadow:0 16px 26px -10px rgba(0,0,0,0.35); filter:brightness(1.04); }
+.tile:active{ transform:scale(0.96) translateY(0); box-shadow:0 4px 10px -4px rgba(0,0,0,0.3); filter:brightness(0.97); }
+.tile .icono{
+width:46px; height:46px; border-radius:16px; background:rgba(255,255,255,0.25);
+display:flex; align-items:center; justify-content:center; font-size:1.3rem;
+transition:transform .12s ease;
+}
+.tile:active .icono{ transform:scale(0.9); }
+.tile-row{
+display:flex; align-items:center; gap:.9rem;
+min-height:60px; padding:.7rem 1rem; border-radius:18px; color:#fff;
+font-weight:800; font-size:.92rem; text-align:left; cursor:pointer;
+box-shadow:0 8px 18px -8px rgba(0,0,0,0.28);
+border:2px solid rgba(255,255,255,0.12);
+transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+-webkit-tap-highlight-color:transparent;
+}
+.tile-row .icono{
+width:44px; height:44px; border-radius:14px; background:rgba(255,255,255,0.25);
+display:flex; align-items:center; justify-content:center; font-size:1.15rem; flex-shrink:0;
+transition:transform .12s ease;
+}
+.tile-row-img{
+display:block; width:100%; aspect-ratio:1000/148; object-fit:cover; border-radius:22px;
+box-shadow:0 8px 18px -8px rgba(0,0,0,0.28); border:2px solid rgba(255,255,255,0.12);
+transition:transform .12s ease, box-shadow .12s ease;
+}
+.tile-row-img-btn{ padding:0; background:none; border:none; width:100%; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+.tile-row-img-btn:active .tile-row-img{ transform:scale(0.97); }
+.tile-row-img-btn:hover .tile-row-img{ transform:translateY(-2px); box-shadow:0 12px 22px -8px rgba(0,0,0,0.32); }
+.tile-row-flat{
+display:flex; align-items:center; justify-content:flex-start; width:100%; aspect-ratio:1000/148;
+border-radius:22px; padding:0 1.4rem; color:#fff; font-weight:800; font-size:1.05rem; text-align:left;
+box-shadow:0 8px 18px -8px rgba(0,0,0,0.28); border:2px solid rgba(255,255,255,0.12); cursor:pointer;
+transition:transform .12s ease, box-shadow .12s ease; -webkit-tap-highlight-color:transparent;
+}
+.tile-row-flat:hover{ transform:translateY(-2px); box-shadow:0 12px 22px -8px rgba(0,0,0,0.32); }
+.tile-row-flat:active{ transform:scale(0.97); }
+.tile-btn{
+position:relative; display:flex; align-items:center; width:100%; min-height:60px;
+border-radius:18px; overflow:hidden; cursor:pointer; border:2px solid rgba(255,255,255,0.12);
+box-shadow:0 8px 18px -8px rgba(0,0,0,0.28); transition:transform .12s ease, box-shadow .12s ease;
+-webkit-tap-highlight-color:transparent;
+}
+.tile-btn:hover{ transform:translateY(-2px); box-shadow:0 12px 22px -8px rgba(0,0,0,0.32); }
+.tile-btn:active{ transform:scale(0.97); }
+.tile-texto{
+position:relative; z-index:2; flex:1 1 auto; padding:.55rem .8rem;
+padding-right:26%; color:#fff; font-weight:800; font-size:.88rem; text-align:left; line-height:1.2;
+}
+.tile-foto{
+position:absolute; right:0; top:0; bottom:0; width:38%;
+background-size:cover; background-position:right center;
+-webkit-mask-image:linear-gradient(to right, transparent 0%, black 55%);
+mask-image:linear-gradient(to right, transparent 0%, black 55%);
+}
+.tile-icono-grande{
+position:absolute; right:14px; top:50%; transform:translateY(-50%);
+width:52px; height:52px; border-radius:16px; background:rgba(255,255,255,0.22);
+display:flex; align-items:center; justify-content:center; font-size:1.5rem; color:#fff;
+box-shadow:inset 0 0 0 2px rgba(255,255,255,0.25);
+}
+.chat-fondo{
+background-color:#EDE6D8;
+background-image:radial-gradient(circle at 20% 20%, rgba(31,58,46,0.035) 0, transparent 40%), radial-gradient(circle at 80% 60%, rgba(31,58,46,0.035) 0, transparent 40%);
+border-radius:18px; padding:.75rem; min-height:120px;
+}
+.burbuja-msg{
+max-width:78%; padding:.5rem .75rem .35rem; box-shadow:0 1px 2px rgba(0,0,0,0.12);
+position:relative; word-wrap:break-word;
+}
+.burbuja-mia{ background:#DCF3D6; color:var(--ink); border-radius:16px 16px 3px 16px; margin-left:auto; }
+.burbuja-otro{ background:#fff; color:var(--ink); border-radius:16px 16px 16px 3px; margin-right:auto; }
+.burbuja-meta{ display:flex; align-items:center; justify-content:flex-end; gap:3px; margin-top:2px; }
+.burbuja-hora{ font-size:.65rem; color:var(--sage); opacity:.8; }
+.burbuja-check{ font-size:.7rem; color:#9AA5A0; }
+.burbuja-check.leido{ color:#3B9DE8; }
+.chat-header-wa{
+display:flex; align-items:center; gap:.6rem; border-radius:18px; padding:.7rem .9rem;
+background:linear-gradient(155deg, var(--pine), #16281f); color:#fff; box-shadow:0 6px 16px -8px rgba(0,0,0,0.3);
+}
+.chat-header-wa .subt{ font-size:.7rem; opacity:.75; }
+.burbuja-reacciones{
+display:flex; gap:2px; margin-top:4px;
+}
+.btn-reaccion{
+font-size:.8rem; line-height:1; padding:2px 5px; border-radius:999px; background:rgba(0,0,0,0.04);
+border:none; opacity:.45; transition:transform .1s ease, opacity .1s ease;
+}
+.btn-reaccion:active{ transform:scale(1.3); }
+.btn-reaccion.activa{ opacity:1; background:rgba(0,0,0,0.12); }
+.reaccion-fija{
+position:absolute; bottom:-8px; right:6px; background:#fff; border-radius:999px; padding:1px 5px;
+font-size:.75rem; box-shadow:0 1px 3px rgba(0,0,0,0.25);
+}
+#btn-nota-voz-productor.grabando, #btn-nota-voz-veterinario.grabando{
+background:#D64545 !important; color:#fff !important; border-color:#D64545 !important;
+animation:pulso-grabando 1s infinite;
+}
+@keyframes pulso-grabando{ 0%,100%{ opacity:1; } 50%{ opacity:.55; } }
+.tile-row:hover{ transform:translateX(2px); box-shadow:0 12px 22px -10px rgba(0,0,0,0.32); filter:brightness(1.04); }
+.tile-row:active{ transform:scale(0.98); filter:brightness(0.97); }
+.tile-row:active .icono{ transform:scale(0.9); }
+.tile-cuadro{
+display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.5rem;
+aspect-ratio:1/1; border-radius:22px; color:#fff; text-align:center; padding:.5rem;
+box-shadow:0 8px 18px -8px rgba(0,0,0,0.28); border:2px solid rgba(255,255,255,0.12);
+cursor:pointer; transition:transform .12s ease, box-shadow .12s ease; -webkit-tap-highlight-color:transparent;
+position:relative;
+}
+.tile-cuadro:hover{ transform:translateY(-2px); box-shadow:0 12px 22px -8px rgba(0,0,0,0.32); }
+.tile-cuadro:active{ transform:scale(0.96); }
+.tile-cuadro .icono-cuadro{
+width:46px; height:46px; border-radius:16px; background:rgba(255,255,255,0.25);
+display:flex; align-items:center; justify-content:center; font-size:1.3rem;
+}
+.tile-cuadro .texto-cuadro{ font-weight:800; font-size:.8rem; line-height:1.15; }
+.bg-orange{ background:linear-gradient(155deg, var(--orange), var(--orange-d)); }
+.bg-red{ background:linear-gradient(155deg, var(--red), var(--red-d)); }
+.bg-yellow{ background:linear-gradient(155deg, var(--yellow), var(--yellow-d)); }
+.bg-green{ background:linear-gradient(155deg, var(--green), var(--green-d)); }
+.bg-blue{ background:linear-gradient(155deg, var(--blue), var(--blue-d)); }
+.bg-purple{ background:linear-gradient(155deg, var(--purple), var(--purple-d)); }
+.bg-pink{ background:linear-gradient(155deg, var(--pink), var(--pink-d)); }
+.bg-teal{ background:linear-gradient(155deg, var(--teal), var(--teal-d)); }
+.bg-slate{ background:linear-gradient(155deg, var(--slate), var(--slate-d)); }
+.btn-volver{
+display:inline-flex; align-items:center; gap:.5rem;
+font-weight:700; font-size:1.05rem; color:var(--pine); padding:.6rem 1rem;
+border-radius:999px; margin-left:-1rem; cursor:pointer;
+transition:background .12s ease, transform .1s ease;
+}
+.btn-volver:hover{ background:rgba(31,58,46,0.08); }
+.btn-volver:active{ transform:scale(0.96); }
+.btn-primario-plano{
+display:flex; align-items:center; justify-content:center; gap:.6rem;
+min-height:50px; padding:11px 20px; border-radius:999px; font-weight:800; font-size:.95rem;
+background:var(--pine); color:#fff; cursor:pointer;
+box-shadow:0 8px 18px -8px rgba(0,0,0,0.35);
+transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+-webkit-tap-highlight-color:transparent;
+}
+.btn-primario-plano:hover{ transform:translateY(-2px); box-shadow:0 12px 22px -10px rgba(0,0,0,0.4); filter:brightness(1.05); }
+.btn-primario-plano:active{ transform:scale(0.97); filter:brightness(0.95); }
+.btn-primario-plano:disabled{ opacity:.6; cursor:not-allowed; filter:grayscale(.15); transform:none; }
+.spinner-mini{
+display:inline-block; width:16px; height:16px; border-radius:50%;
+border:3px solid rgba(255,255,255,0.35); border-top-color:#fff;
+animation:girar-spinner .7s linear infinite;
+}
+.spinner-mini.hidden{ display:none !important; }
+@keyframes girar-spinner{ to{ transform:rotate(360deg); } }
+.btn-espejo{ position:relative; overflow:hidden; }
+.btn-espejo::after{
+content:''; position:absolute; top:0; left:-150%; width:55%; height:100%;
+background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%);
+transform:skewX(-20deg); pointer-events:none;
+animation: miranchapp-barrido-espejo 3.4s ease-in-out infinite;
+}
+@keyframes miranchapp-barrido-espejo{
+0%{ left:-150%; }
+55%{ left:150%; }
+100%{ left:150%; }
+}
+.btn-latido{ animation: miranchapp-latido 1.7s ease-in-out infinite; display:inline-block; }
+@keyframes miranchapp-latido{
+0%, 100%{ transform:scale(1); }
+50%{ transform:scale(1.07); }
+}
+/* ---- Banner de notificación chico, esquina inferior izquierda, tipo cortina ---- */
+#banner-notificacion-cortina{
+position:fixed; left:12px; bottom:16px; z-index:200;
+display:flex; align-items:center; gap:.5rem;
+background:var(--pine); color:#fff; font-weight:700; font-size:.78rem;
+padding:.55rem .9rem; border-radius:999px; box-shadow:0 8px 20px -6px rgba(0,0,0,0.4);
+max-width:78vw; white-space:nowrap; overflow:hidden;
+clip-path:inset(0 100% 0 0); opacity:0;
+pointer-events:none;
+}
+#banner-notificacion-cortina.mostrar{
+animation: miranchapp-cortina-entra .45s ease-out forwards;
+}
+#banner-notificacion-cortina.ocultar{
+animation: miranchapp-cortina-sale .35s ease-in forwards;
+}
+@keyframes miranchapp-cortina-entra{
+0%{ clip-path:inset(0 100% 0 0); opacity:0; }
+15%{ opacity:1; }
+100%{ clip-path:inset(0 0 0 0); opacity:1; }
+}
+@keyframes miranchapp-cortina-sale{
+0%{ clip-path:inset(0 0 0 0); opacity:1; }
+100%{ clip-path:inset(0 100% 0 0); opacity:0; }
+}
+@media (prefers-reduced-motion: reduce){
+#banner-notificacion-cortina.mostrar, #banner-notificacion-cortina.ocultar{ animation:none; clip-path:inset(0 0 0 0); opacity:1; }
+}
+@media (prefers-reduced-motion: reduce){
+.btn-espejo::after{ animation:none; }
+.btn-latido{ animation:none; }
+}
+input:focus, button:focus, select:focus, textarea:focus{
+outline:3px solid var(--yellow); outline-offset:2px;
+}
+input, select, textarea{
+width:100%; border-radius:10px; padding:8px; font-size:.95rem;
+border:2px solid var(--line); background:#fff;
+}
+label.campo-label{ display:block; font-size:.75rem; font-weight:700; margin-bottom:.2rem; color:var(--ink); }
+input.campo-mayusculas, textarea.campo-mayusculas{ text-transform:uppercase; }
+input.campo-mayusculas::placeholder, textarea.campo-mayusculas::placeholder{ text-transform:none; }
+.grupo-campo{ position:relative; }
+.grupo-campo .campo-check{
+display:none; position:absolute; top:-6px; right:-6px; width:20px; height:20px; border-radius:999px;
+background:var(--green); color:#fff; align-items:center; justify-content:center; font-size:.6rem; z-index:1;
+box-shadow:0 2px 6px rgba(0,0,0,0.25);
+}
+.grupo-campo.campo-lleno .campo-check{ display:flex; }
+.grupo-campo.campo-lleno input, .grupo-campo.campo-lleno select{ border-color:var(--green); background:#F3FBF6; }
+.grupo-campo.campo-vacio-requerido input, .grupo-campo.campo-vacio-requerido select{ border-color:var(--red); }
+.btn-sexo-grupo{ display:flex; gap:.5rem; }
+.btn-sexo{
+flex:1; text-align:center; padding:.75rem 0; border-radius:14px; cursor:pointer;
+font-weight:800; font-size:.95rem; color:var(--sage); background:#fff; border:2px solid var(--line);
+transition:transform .1s ease, background .12s ease, color .12s ease;
+-webkit-tap-highlight-color:transparent;
+}
+.btn-sexo:active{ transform:scale(0.96); }
+.btn-sexo.activo{ background:var(--pine); color:#fff; border-color:var(--pine); }
+.btn-sexo.activo.es-macho{ background:var(--blue); border-color:var(--blue); }
+.tab-letra{
+min-width:52px; min-height:52px; border-radius:999px; font-weight:800; font-size:1.15rem;
+display:flex; align-items:center; justify-content:center; cursor:pointer;
+background:#fff; border:2px solid var(--line); color:var(--sage);
+transition:transform .12s ease, box-shadow .12s ease;
+-webkit-tap-highlight-color:transparent;
+}
+.tab-letra:hover{ transform:translateY(-2px); box-shadow:0 8px 14px -8px rgba(0,0,0,0.25); }
+.tab-letra:active{ transform:scale(0.92); }
+.tab-letra.active{ color:#fff; border-color:transparent; transform:scale(1.08); box-shadow:0 8px 16px -8px rgba(0,0,0,0.35); }
+.chip-modulo{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.35rem; padding:.9rem .4rem; border-radius:16px; border:2px solid var(--line); background:#fff; color:var(--ink); font-size:.72rem; font-weight:700; text-align:center; min-height:76px; }
+.chip-modulo i{ font-size:1.3rem; }
+.chip-modulo-azul{ border-color:#3B82F6; color:#3B82F6; }
+.chip-modulo-rojo{ border-color:#DC2626; color:#DC2626; }
+.chip-modulo-verde{ border-color:#16A34A; color:#16A34A; }
+.chip-modulo-naranja{ border-color:#EA580C; color:#EA580C; }
+.chip-modulo.active{ background:var(--pine); border-color:var(--pine); color:#fff; }
+.subtab{
+flex:1; text-align:center; padding:.7rem 0; border-radius:999px; cursor:pointer;
+font-weight:700; font-size:.92rem; color:var(--sage); background:#fff; border:2px solid var(--line);
+transition:transform .1s ease, background .12s ease, color .12s ease;
+-webkit-tap-highlight-color:transparent;
+}
+.subtab:hover{ transform:translateY(-1px); }
+.subtab:active{ transform:scale(0.96); }
+.subtab.active{ background:var(--ink); color:#fff; border-color:var(--ink); }
+.subtab-icono{
+flex:none; border-radius:16px; padding:.85rem .4rem .7rem; display:flex; flex-direction:column;
+align-items:center; justify-content:center; gap:.35rem; line-height:1.05;
+}
+.subtab-icono i{ font-size:1.15rem; }
+.subtab-icono span:last-child{ font-size:.72rem; }
+.reg-tipo-icono{
+width:30px; height:30px; border-radius:9px; flex-shrink:0;
+display:flex; align-items:center; justify-content:center;
+background-size:cover; background-position:center;
+}
+.navbar-item{
+display:flex; flex-direction:column; align-items:center; gap:.25rem;
+flex:1; padding:.6rem 0 .5rem; color:var(--sage); font-size:.74rem; font-weight:700;
+cursor:pointer; border-radius:18px; transition:transform .1s ease, color .12s ease;
+-webkit-tap-highlight-color:transparent;
+}
+.navbar-item:active{ transform:scale(0.92); }
+.navbar-item.active{ color:var(--pine); }
+.navbar-item.active i{ transform:translateY(-2px); }
+.navbar-item i{ font-size:1.3rem; transition:transform .12s ease; }
+.item-registro{
+background:#fff; border-radius:16px; padding:.9rem 1rem; border:2px solid var(--line);
+}
+.vacio{
+text-align:center; padding:2.5rem 1rem; color:var(--sage);
+}
+.vacio i{ font-size:2.2rem; margin-bottom:.6rem; display:block; color:var(--line); }
+.switch{
+position:relative; width:52px; height:30px; flex-shrink:0;
+}
+.switch input{ opacity:0; width:0; height:0; }
+.switch-slider{
+position:absolute; inset:0; background:#D8D0B8; border-radius:999px; cursor:pointer; transition:.15s;
+}
+.switch-slider::before{
+content:""; position:absolute; width:24px; height:24px; left:3px; top:3px;
+background:#fff; border-radius:50%; transition:.15s; box-shadow:0 1px 3px rgba(0,0,0,0.3);
+}
+.switch input:checked + .switch-slider{ background:var(--green); }
+.switch input:checked + .switch-slider::before{ transform:translateX(22px); }
+.chart-box{ position:relative; height:220px; }</style>
+
+<style id="miranch-header-final">
+.miranch-topbar{height:60px;min-height:60px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 10px;background-size:cover;background-position:center;position:relative;overflow:visible;box-shadow:0 2px 12px rgba(0,0,0,.18);}
+.miranch-topbar::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,40,28,.34),rgba(20,40,28,.64));pointer-events:none;}
+.miranch-topbar>*{position:relative;z-index:1;}
+.miranch-brand{display:flex;align-items:center;min-width:0;flex:1;}
+.miranch-brand img{width:auto;height:40px;max-width:min(58vw,205px);object-fit:contain;object-position:left center;filter:drop-shadow(0 1px 2px rgba(0,0,0,.45));}
+.miranch-actions{display:flex;align-items:center;gap:5px;flex-shrink:0;}
+.miranch-action{height:42px;min-width:42px;border:1px solid rgba(255,255,255,.32);border-radius:13px;background:rgba(18,35,25,.34);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);color:#fff;font-size:.76rem;font-weight:800;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;gap:5px;box-shadow:0 2px 7px rgba(0,0,0,.12);}
+.miranch-action:active{transform:scale(.96);}
+.miranch-action.lang{color:#FFF4CF;}
+.miranch-action.logout{color:#fff;}
+.miranch-lang-menu{top:calc(100% + 6px)!important;right:0!important;}
+@media(max-width:380px){.miranch-topbar{padding-left:8px;padding-right:8px;}.miranch-brand img{height:36px;max-width:55vw;}.miranch-action{height:40px;min-width:40px;padding:0 8px;font-size:.72rem;}.miranch-action.logout span{display:none;}}
+</style>
+</head>
+<body class="min-h-screen">
+<!-- ============ LOGIN ============ -->
+<div class="screen active min-h-screen flex flex-col items-center justify-center px-6" id="screen-login" style="background:var(--pine); background-size:cover; background-position:center; position:relative;">
+<div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,40,28,0.32) 0%, rgba(20,40,28,0.12) 45%, rgba(20,40,28,0.4) 100%);"></div>
+<div class="w-full max-w-sm" style="position:relative; z-index:1;">
+<div class="flex flex-col items-center mb-4">
+<img alt="MiRanch" class="w-48 h-auto object-contain mb-4 drop-shadow-2xl" decoding="async" loading="lazy" src="./iranch-modular/assets/logo-miranch-vertical.png" data-logo-role="vertical"/>
+</div>
+<div class="rounded-3xl p-4 space-y-2" style="background:rgba(245,236,216,0.68); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.35);">
+<p class="text-base font-display font-bold text-center" data-i18n="login_seleccion_rol__inicia_sesion" style="color:var(--pine);">Inicia Sesión</p>
+<div class="hidden space-y-1" id="bloque-cuentas-guardadas">
+<label class="campo-label" style="color:#5C3A1E;">Cuentas en este dispositivo</label>
+<div class="space-y-1 overflow-y-auto" id="lista-cuentas-guardadas" style="max-height:88px;"></div>
+<p class="text-xs text-center" style="color:#5C3A1E;">o inicia sesión con otra cuenta abajo</p>
+</div>
+<div class="flex items-center gap-2 rounded-2xl px-3" style="background:rgba(255,255,255,0.55); border:1px solid rgba(92,58,30,0.25);">
+<i class="fa-solid fa-user" style="color:#5C3A1E;"></i>
+<input autocapitalize="none" autocomplete="username" data-i18n-placeholder="login_seleccion_rol__ej_usuario" id="login-usuario" name="username" onkeydown="if(event.key==='Enter'){document.getElementById('login-clave').focus();}" placeholder="Usuario" style="background:transparent; border:none; padding-left:.5rem;" type="text"/>
+</div>
+<div class="flex items-center gap-2 rounded-2xl px-3" style="background:rgba(255,255,255,0.55); border:1px solid rgba(92,58,30,0.25);">
+<i class="fa-solid fa-lock" style="color:#5C3A1E;"></i>
+<input autocapitalize="none" autocomplete="current-password" autocorrect="off" data-i18n-placeholder="login_seleccion_rol__contrasena" id="login-clave" name="current-password" onkeydown="if(event.key==='Enter'){iniciarSesion();}" placeholder="Contraseña" spellcheck="false" style="background:transparent; border:none; padding-left:.5rem;" type="password"/>
+<button onclick="alternarVerContrasenaLogin()" style="color:#5C3A1E;" type="button"><i class="fa-solid fa-eye" id="icono-ver-contrasena-login"></i></button>
+</div>
+<div class="text-right -mt-1">
+<button class="text-xs font-bold" data-i18n="login_seleccion_rol__olvide_mi_contrasena" onclick="abrirRecuperarContrasena()" style="color:#8A5323; text-decoration:underline;">¿Olvidé mi contraseña?</button>
+</div>
+<button class="w-full btn-primario-plano" id="btn-iniciar-sesion" onclick="iniciarSesion()" style="background:var(--green); min-height:52px;">
+<span class="hidden spinner-mini" id="btn-iniciar-sesion-spinner"></span>
+<span data-i18n="login_seleccion_rol__iniciar_sesion_mayus" id="btn-iniciar-sesion-texto">INICIAR SESIÓN</span>
+</button>
+<div class="flex items-center gap-2 my-2" style="color:#5C3A1E;"><span style="height:1px; flex:1; background:rgba(92,58,30,.25);"></span><span class="text-xs font-bold">CONFIRMAR CON</span><span style="height:1px; flex:1; background:rgba(92,58,30,.25);"></span></div>
+<button class="w-full btn-primario-plano" id="btn-login-google" onclick="iniciarSesionConGoogle()" type="button" style="background:#fff; color:#202124; border:1px solid rgba(0,0,0,.16); min-height:50px;">
+<i class="fa-brands fa-google" style="color:#4285F4; margin-right:.5rem;"></i><span>Continuar con Google</span>
+</button>
+<button class="w-full btn-primario-plano" id="btn-login-facebook" onclick="iniciarSesionConFacebook()" type="button" style="background:#1877F2; color:#fff; min-height:50px;">
+<i class="fa-brands fa-facebook" style="margin-right:.5rem;"></i><span>Continuar con Facebook</span>
+</button>
+<p class="text-[11px] text-center" style="color:#5C3A1E;">La cuenta de Google o Facebook identifica tu cuenta MiRanch. No compartas tu contraseña con MiRanch.</p>
+<p class="text-sm text-center" style="color:#5C3A1E;">
+<span data-i18n="login_seleccion_rol__no_tienes_cuenta">¿No tienes cuenta?</span>
+<button class="font-bold" data-i18n="login_seleccion_rol__registrate_aqui" onclick="abrirRegistroCuenta()" style="color:var(--pine); text-decoration:underline;">Regístrate aquí</button>
+</p>
+</div>
+</div>
+</div>
+<!-- ---------- OLVIDE MI CONTRASENA ---------- -->
+<div class="hidden" id="modal-recuperar-contrasena" style="position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:80; align-items:flex-end;">
+<div class="w-full bg-white rounded-t-3xl p-6 space-y-3" style="max-height:85vh; overflow-y:auto;">
+<div class="flex items-center justify-between">
+<p class="font-display text-lg font-bold" data-i18n="login_seleccion_rol__olvide_mi_contrasena">¿Olvidé mi contraseña?</p>
+<button onclick="cerrarRecuperarContrasena()" style="color:var(--sage);"><i class="fa-solid fa-xmark text-xl"></i></button>
+</div>
+<p class="text-sm" data-i18n="login_seleccion_rol__te_enviaremos_un_codigo" style="color:var(--sage);">Te enviaremos un código por WhatsApp al teléfono registrado en tu cuenta.</p>
+<div><label class="campo-label" data-i18n="admin_cuentas_productores__nombre_del_productor">Nombre del productor</label><input id="rec-nombre" type="text"/></div>
+<div><label class="campo-label" data-i18n="admin_cuentas_productores__telefono_whatsapp">Teléfono (WhatsApp)</label><input id="rec-telefono" placeholder="10 dígitos" type="tel"/></div>
+<button class="w-full btn-primario-plano" onclick="enviarCodigoRecuperacion()" style="background:#25D366;"><i class="fa-brands fa-whatsapp"></i><span data-i18n="login_seleccion_rol__enviar_codigo_por_whatsapp">Enviar código por WhatsApp</span></button>
+</div>
+</div>
+<!-- ---------- REGISTRAR NUEVA CUENTA ---------- -->
+<div class="hidden" id="modal-registro-cuenta" style="position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:80; align-items:flex-end;">
+<div class="w-full bg-white rounded-t-3xl p-6 space-y-3" style="max-height:85vh; overflow-y:auto;">
+<div class="flex items-center justify-between">
+<p class="font-display text-lg font-bold" data-i18n="login_seleccion_rol__ligar_nueva_cuenta">Ligar nueva cuenta</p>
+<button onclick="cerrarRegistroCuenta()" style="color:var(--sage);"><i class="fa-solid fa-xmark text-xl"></i></button>
+</div>
+<!-- ---- PASO 1: DATOS ---- -->
+<div id="reg-paso1">
+<p class="text-sm mb-2" data-i18n="login_seleccion_rol__crea_tu_acceso" style="color:var(--sage);">Crea tu acceso. Tu cuenta queda lista para usarse de inmediato.</p>
+<div>
+<label class="campo-label" data-i18n="admin_cuentas_productores__tipo_de_modulo">Tipo de módulo</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="chip-modulo chip-modulo-azul active" id="reg-tipo-btn-leche" onclick="seleccionarTipoRegistro('leche')" type="button"><i class="fa-solid fa-jug-detergent"></i><span data-i18n="admin_cuentas_productores__lechera">Lechera</span></button>
+<button class="chip-modulo chip-modulo-rojo" id="reg-tipo-btn-carne" onclick="seleccionarTipoRegistro('carne')" type="button"><i class="fa-solid fa-drumstick-bite"></i><span data-i18n="admin_cuentas_productores__carne">Carne</span></button>
+<button class="chip-modulo chip-modulo-azul" id="reg-tipo-btn-punto" onclick="seleccionarTipoRegistro('punto')" type="button"><i class="fa-solid fa-industry"></i><span data-i18n="login_seleccion_rol__punto_receptor_de_leche">Punto receptor</span></button>
+<button class="chip-modulo chip-modulo-verde" id="reg-tipo-btn-mvz" onclick="seleccionarTipoRegistro('mvz')" type="button"><i class="fa-solid fa-user-doctor"></i><span data-i18n="login_seleccion_rol__mvz">MVZ</span></button>
+<button class="chip-modulo chip-modulo-naranja" id="reg-tipo-btn-cefp" onclick="seleccionarTipoRegistro('cefp')" title="Comité Estatal de Fomento y Protección Pecuaria" type="button"><i class="fa-solid fa-building-shield"></i><span>CEFPP</span></button>
+</div>
+</div>
+<input id="reg-tipo" type="hidden" value="leche"/>
+<div class="hidden" id="reg-grupo-cefp">
+<label class="campo-label">Puesto en el CEFPP</label>
+<select id="reg-cefp-puesto">
+<option value="comite">Comité Estatal</option>
+<option value="tv_coordinacion">TV Coordinación</option>
+<option value="tv_capturista_recepcion">TV Capturista — Recepción y asignación de pruebas</option>
+<option value="tv_capturista_dictamenes">TV Capturista — Impresión de dictámenes</option>
+<option value="medico_campo_tb">Médico de campo TB</option>
+</select>
+<label class="campo-label">Centro de trabajo</label>
+<input id="reg-cefp-centro" type="text"/>
+<label class="campo-label">Estado</label>
+<input id="reg-cefp-estado" placeholder="Ej. Durango" type="text"/>
+<label class="campo-label">Municipio</label>
+<input id="reg-cefp-municipio" type="text"/>
+<label class="campo-label">CURP</label>
+<input id="reg-cefp-curp" maxlength="18" style="text-transform:uppercase;" type="text"/>
+<p class="text-xs mt-2" style="color:var(--yellow-d, #8a6d1f);"><i class="fa-solid fa-circle-info mr-1"></i>Este tipo de cuenta necesita que un administrador la autorice antes de poder usarse.</p>
+</div>
+<div class="hidden" id="reg-grupo-local">
+<label class="campo-label" data-i18n="login_seleccion_rol__nombre_del_local">Nombre del local</label>
+<input id="reg-local" type="text"/>
+</div>
+<div>
+<label class="campo-label" data-i18n="admin_cuentas_productores__nombre_del_productor" id="reg-nombre-label">Nombre del productor</label>
+<div class="flex items-center gap-2 rounded-2xl px-3" style="background:#F1E8D0; border:1px solid rgba(92,58,30,0.25);">
+<input id="reg-nombre" placeholder="Nombre completo" style="background:transparent; border:none; width:100%; padding:.7rem 0;" type="text"/>
+</div>
+</div>
+<div class="space-y-2" id="reg-grupo-productor">
+<div>
+<label class="campo-label" data-i18n="admin_cuentas_productores__nombre_del_predio">Nombre del predio</label>
+<div class="flex items-center gap-2 rounded-2xl px-3" style="background:#F1E8D0; border:1px solid rgba(92,58,30,0.25);">
+<input id="reg-predio" placeholder="Nombre de la finca" style="background:transparent; border:none; width:100%; padding:.7rem 0;" type="text"/>
+</div>
+</div>
+<div>
+<label class="campo-label" data-i18n="admin_cuentas_productores__numero_de_upp">Número de UPP <span class="font-normal text-xs opacity-70">(obligatorio para el periodo inicial) *</span></label>
+<div class="flex items-center gap-2 rounded-2xl px-3" style="background:#F1E8D0; border:1px solid rgba(92,58,30,0.25);">
+<input id="reg-upp" maxlength="12" placeholder="Número UPP (12 dígitos)" style="background:transparent; border:none; width:100%; padding:.7rem 0;" type="text"/>
+</div>
+</div>
+</div>
+<div class="hidden" id="reg-grupo-mvz">
+<label class="campo-label" data-i18n="login_seleccion_rol__cedula_profesional">Cédula profesional *</label>
+<input id="reg-cedula" type="text"/>
+<label class="campo-label" data-i18n="login_seleccion_rol__lugar_de_residencia">Lugar de residencia *</label>
+<input id="reg-residencia" type="text"/>
+</div>
+<div><label class="campo-label" data-i18n="admin_cuentas_productores__telefono_whatsapp">Teléfono (WhatsApp)</label>
+<div class="flex items-center gap-2 rounded-2xl px-3" style="background:#F1E8D0; border:1px solid rgba(92,58,30,0.25);">
+<input id="reg-telefono" placeholder="+52 555-1234" style="background:transparent; border:none; width:100%; padding:.7rem 0;" type="tel"/>
+</div>
+</div>
+<div>
+<label class="campo-label">Correo electrónico *</label>
+<div class="flex items-center gap-2 rounded-2xl px-3" style="background:#F1E8D0; border:1px solid rgba(92,58,30,0.25);">
+<input autocomplete="email" id="reg-correo" placeholder="tu@correo.com" style="background:transparent; border:none; width:100%; padding:.7rem 0;" type="email"/>
+</div>
+<p class="text-xs mt-1" style="color:var(--sage);">Te enviaremos un enlace para verificar que el correo es tuyo.</p>
+</div>
+<div class="hidden" id="reg-grupo-ubicacion">
+<label class="campo-label" data-i18n="login_seleccion_rol__ubicacion_basica">Ubicación básica</label>
+<button class="w-full btn-primario-plano" onclick="obtenerUbicacionRegistro()" style="background:var(--slate);" type="button">
+<i class="fa-solid fa-location-crosshairs"></i><span data-i18n="login_seleccion_rol__enviar_ubicacion_actual">Enviar ubicación actual</span>
+</button>
+<p class="text-xs mt-1" id="reg-ubicacion-estado" style="color:var(--sage);"></p>
+<input id="reg-lat" type="hidden"/>
+<input id="reg-lng" type="hidden"/>
+</div>
+<button class="w-full btn-primario-plano mt-2" id="btn-continuar-registro" onclick="validarPaso1Registro()" style="background:var(--pine);" type="button">
+<span data-i18n="login_seleccion_rol__continuar">Continuar</span>
+</button>
+</div>
+<!-- ---- PASO 2: USUARIO Y CONTRASEÑA ---- -->
+<div class="hidden" id="reg-paso2">
+<button class="text-sm font-bold mb-2" onclick="volverPaso1Registro()" style="color:var(--sage);" type="button"><i class="fa-solid fa-arrow-left"></i> <span data-i18n="volver">Volver</span></button>
+<div>
+<label class="campo-label" data-i18n="login_seleccion_rol__crea_tu_usuario">Crea tu usuario</label>
+<input autocapitalize="none" autocomplete="username" data-i18n-placeholder="login_seleccion_rol__minimo_6_caracteres" id="reg-usuario" name="username" placeholder="Mínimo 6 caracteres" type="text"/>
+</div>
+<div>
+<label class="campo-label" data-i18n="login_seleccion_rol__crea_tu_contrasena">Crea tu contraseña</label>
+<input autocomplete="new-password" data-i18n-placeholder="login_seleccion_rol__minimo_6_caracteres" id="reg-clave" name="new-password" placeholder="Mínimo 6 caracteres" type="password"/>
+<p class="text-xs mt-1" data-i18n="login_seleccion_rol__6_o_mas_letras_numeros" style="color:var(--sage);">6 o más caracteres, letras, números o combinados.</p>
+</div>
+<button class="w-full btn-primario-plano" id="btn-enviar-solicitud-registro" onclick="enviarSolicitudRegistro()" style="background:var(--pine); position:relative; overflow:hidden;">
+<span data-i18n="login_seleccion_rol__enviar_solicitud" id="btn-enviar-solicitud-texto">Enviar solicitud</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ---------- CODIGO DE TRABAJADOR ---------- -->
+<div class="screen min-h-screen flex flex-col items-center justify-center px-6" id="screen-codigo-trabajador" style="background:var(--pine);">
+<div class="w-full max-w-sm">
+<button class="mb-4" onclick="mostrarPantallaLogin()" style="color:#fff; opacity:.8;"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+<div class="flex flex-col items-center mb-6">
+<i class="fa-solid fa-key text-4xl" style="color:#fff;"></i>
+<h1 class="font-display text-2xl font-bold text-white mt-2 text-center">Acceso de trabajador</h1>
+<p class="text-sm mt-1 text-center" data-i18n="codigo_trabajador__pideselo_a_tu_administrador_o" style="color:#B9CDBE;">Pídeselo a tu administrador o productor. Tu acceso dura 7 días.</p>
+</div>
+<div class="bg-white rounded-3xl p-6 space-y-4 shadow-xl">
+<input autocomplete="username" id="input-codigo-trabajador" placeholder="Usuario de trabajador" style="text-align:center; font-size:1.2rem; letter-spacing:.08rem;" type="text"/>
+<input autocomplete="current-password" id="input-clave-trabajador" placeholder="Contraseña" onkeydown="if(event.key==='Enter'){entrarComoTrabajador();}" style="text-align:center; font-size:1.2rem; letter-spacing:.08rem;" type="password"/>
+<button class="w-full btn-primario-plano" onclick="entrarComoTrabajador()" style="background:var(--teal);">
+<i class="fa-solid fa-right-to-bracket"></i><span data-i18n="codigo_trabajador__entrar">Entrar</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ---------- SELECCION TIPO DE GANADO ---------- -->
+<div class="screen min-h-screen flex flex-col items-center justify-center px-6" id="screen-tipo-ganado" style="background:var(--pine);">
+<div class="w-full max-w-sm">
+<button class="mb-4" onclick="mostrarPantallaLogin()" style="color:#fff; opacity:.8;"><i class="fa-solid fa-arrow-left"></i> Volver</button>
+<div class="flex flex-col items-center mb-6">
+<i class="fa-solid fa-cow text-4xl" style="color:#fff;"></i>
+<h1 class="font-display text-2xl font-bold text-white mt-2 text-center" data-i18n="seleccion_tipo_ganado__que_tipo_de_ganado_manejas">¿Qué tipo de ganado manejas?</h1>
+<p class="text-sm mt-1 text-center" data-i18n="seleccion_tipo_ganado__elige_tu_tipo_de_produccion" style="color:#B9CDBE;">Elige tu tipo de producción para adaptar tus funciones</p>
+</div>
+<div class="bg-white rounded-3xl p-6 space-y-4 shadow-xl">
+<button class="w-full btn-primario-plano" onclick="elegirTipoGanado('carne')" style="background:var(--orange); min-height:56px;">
+<i class="fa-solid fa-drumstick-bite"></i>
+<span data-i18n="seleccion_tipo_ganado__ganado_vacuno_de_carne">Ganado Vacuno de Carne</span>
+</button>
+<button class="w-full btn-primario-plano" onclick="elegirTipoGanado('leche')" style="background:var(--blue); min-height:56px;">
+<i class="fa-solid fa-jug-detergent"></i>
+<span data-i18n="seleccion_tipo_ganado__ganado_vacuno_de_leche">Ganado Vacuno de Leche</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ============================================================ -->
+<!-- ============ APP PRODUCTOR ============ -->
+<!-- ============================================================ -->
+<div class="hidden min-h-screen flex flex-col" data-iranch-view-source="./iranch-modular/views/app-productor.html" id="app-productor"></div>
+
+<!-- ---------- INFORME BIMESTRAL (descarga obligatoria antes de archivar) ---------- -->
+<!-- No tiene onclick de "cerrar al tocar afuera" a propósito — la única forma
+     de avanzar es descargando el informe primero. Nunca se borra nada, solo
+     se archivan registros viejos DESPUÉS de que la persona ya se llevó su
+     copia. -->
+<div class="hidden fixed inset-0 flex items-end justify-center" id="modal-informe-bimestral" style="background:rgba(33,30,25,0.7); z-index:150;">
+<div class="bg-white w-full max-w-sm rounded-t-[32px] p-6 space-y-3" style="max-height:85vh; overflow-y:auto;">
+<div id="informe-bimestral-vista-1">
+<p class="font-display text-xl font-bold mb-1"><i class="fa-solid fa-box-archive"></i> Tu informe bimestral está listo</p>
+<p class="text-sm mb-3" style="color:var(--sage);">Para que tu cuenta no se ponga pesada, se van a archivar algunos registros de más de 12 meses (siguen disponibles siempre en "Historial archivado", nunca se borran). Antes de nada, descarga tu copia:</p>
+<ul class="text-sm space-y-1 mb-4" id="informe-bimestral-resumen" style="list-style:disc; padding-left:1.2rem;"></ul>
+<button class="w-full btn-primario-plano" onclick="descargarInformeBimestral()" style="background:var(--green); min-height:48px;"><i class="fa-solid fa-download"></i> Descargar informe ahora</button>
+</div>
+<div class="hidden" id="informe-bimestral-vista-2">
+<p class="font-display text-xl font-bold mb-1"><i class="fa-solid fa-circle-check" style="color:var(--green);"></i> Descarga lista</p>
+<p class="text-sm mb-3" style="color:var(--sage);">Te recomendamos respaldar ese archivo en tu correo, por si acaso — usa el botón de compartir de tu celular (el mismo que usas para mandar fotos por WhatsApp) y elige tu app de correo.</p>
+<button class="w-full btn-primario-plano mb-2" onclick="compartirInformeBimestralPorCorreo()" style="background:var(--blue); min-height:48px;"><i class="fa-solid fa-share-nodes"></i> Compartir / mandar a mi correo</button>
+<button class="w-full btn-primario-plano" onclick="confirmarArchivadoBimestral()" style="background:var(--green); min-height:48px;"><i class="fa-solid fa-check"></i> Entendido, continuar</button>
+</div>
+</div>
+</div>
+<!-- ---------- CALENDARIO REPRODUCTIVO (visual, tipo Gantt) ---------- -->
+<div class="hidden fixed inset-0 flex items-end justify-center" id="modal-calendario-reproductivo" onclick="if(event.target===this) cerrarCalendarioReproductivo()" style="background:rgba(33,30,25,0.5); z-index:150;">
+<div class="bg-white w-full max-w-sm rounded-t-[32px] p-6 space-y-3" style="max-height:85vh; overflow-y:auto;">
+<div class="flex items-center justify-between">
+<p class="font-display text-xl font-bold"><i class="fa-solid fa-calendar-days"></i> Calendario reproductivo</p>
+<button class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" onclick="cerrarCalendarioReproductivo()" style="background:var(--parchment); color:var(--pine);"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<div class="flex items-center justify-between">
+<button onclick="cambiarAnioCalendarioReproductivo(-1)" style="color:var(--pine); width:32px; height:32px;"><i class="fa-solid fa-chevron-left"></i></button>
+<p class="text-sm font-bold" id="calendario-repro-anio-label"></p>
+<button onclick="cambiarAnioCalendarioReproductivo(1)" style="color:var(--pine); width:32px; height:32px;"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+<div style="overflow-x:auto;"><div id="calendario-repro-cuerpo" style="min-width:420px;"></div></div>
+</div>
+</div>
+<!-- ---------- CATÁLOGO DE CLIENTES / PROVEEDORES ---------- -->
+<div class="hidden fixed inset-0 flex items-end justify-center" id="modal-catalogo-contactos" onclick="if(event.target===this) cerrarCatalogoContactos()" style="background:rgba(33,30,25,0.5); z-index:150;">
+<div class="bg-white w-full max-w-sm rounded-t-[32px] p-6 space-y-3" style="max-height:85vh; overflow-y:auto;">
+<div class="flex items-center justify-between">
+<p class="font-display text-xl font-bold"><i class="fa-solid fa-address-book"></i> Clientes / proveedores</p>
+<button class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" onclick="cerrarCatalogoContactos()" style="background:var(--parchment); color:var(--pine);"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<div class="rounded-2xl p-3 space-y-2" style="background:var(--parchment);">
+<input class="campo-mayusculas" id="cont-nombre" oninput="forzarMayusculas(this)" placeholder="Nombre" type="text"/>
+<div class="grid grid-cols-2 gap-2">
+<select id="cont-tipo"><option value="cliente">Cliente</option><option value="proveedor">Proveedor</option></select>
+<input id="cont-telefono" placeholder="Teléfono (opcional)" type="tel"/>
+</div>
+<input id="cont-notas" placeholder="Notas (opcional)" type="text"/>
+<button class="w-full btn-primario-plano" onclick="guardarContacto()" style="background:var(--pine); min-height:44px;"><i class="fa-solid fa-plus"></i> Agregar</button>
+</div>
+<div class="space-y-2" id="lista-catalogo-contactos"></div>
+</div>
+</div>
+<!-- ---------- CATÁLOGO DE SEMENTALES / PAJILLAS ---------- -->
+<div class="hidden fixed inset-0 flex items-end justify-center" id="modal-catalogo-sementales" onclick="if(event.target===this) cerrarCatalogoSementales()" style="background:rgba(33,30,25,0.5); z-index:150;">
+<div class="bg-white w-full max-w-sm rounded-t-[32px] p-6 space-y-3" style="max-height:85vh; overflow-y:auto;">
+<div class="flex items-center justify-between">
+<p class="font-display text-xl font-bold"><i class="fa-solid fa-dna"></i> Sementales / pajillas</p>
+<button class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" onclick="cerrarCatalogoSementales()" style="background:var(--parchment); color:var(--pine);"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<p class="text-xs" style="color:var(--sage);">Cada vez que registres un servicio de inseminación artificial con un semental de esta lista, se descuenta sola una dosis.</p>
+<div class="rounded-2xl p-3 space-y-2" style="background:var(--parchment);">
+<input class="campo-mayusculas" id="sem-nombre" oninput="forzarMayusculas(this)" placeholder="Nombre del semental / pajilla" type="text"/>
+<div class="grid grid-cols-2 gap-2">
+<input id="sem-raza" placeholder="Raza (opcional)" type="text"/>
+<input id="sem-dosis" min="0" placeholder="Dosis disponibles" type="number"/>
+</div>
+<button class="w-full btn-primario-plano" onclick="guardarSemental()" style="background:var(--pine); min-height:44px;"><i class="fa-solid fa-plus"></i> Agregar al catálogo</button>
+</div>
+<div class="space-y-2" id="lista-catalogo-sementales"></div>
+</div>
+</div>
+<!-- ---------- ÁRBOL GENEALÓGICO ---------- -->
+<div class="hidden fixed inset-0 flex items-end justify-center" id="modal-arbol-genealogico" onclick="if(event.target===this) cerrarArbolGenealogico()" style="background:rgba(33,30,25,0.5); z-index:150;">
+<div class="bg-white w-full max-w-sm rounded-t-[32px] p-6 space-y-3" style="max-height:85vh; overflow-y:auto;">
+<div class="flex items-center justify-between">
+<p class="font-display text-xl font-bold"><i class="fa-solid fa-sitemap"></i> Árbol genealógico</p>
+<button class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" onclick="cerrarArbolGenealogico()" style="background:var(--parchment); color:var(--pine);"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<p class="text-xs" style="color:var(--sage);">Se arma con los datos de madre/padre que ya tiene cada animal — si algún ancestro no está registrado en el hato, aparece en gris con "Sin datos".</p>
+<div id="arbol-genealogico-cuerpo" style="overflow-x:auto;"></div>
+</div>
+</div>
+<!-- ---------- LIGHTBOX FOTO ANIMAL (PANTALLA COMPLETA) ---------- -->
+<div class="hidden fixed inset-0 z-[60] flex items-center justify-center" id="lightbox-animal" onclick="cerrarLightboxAnimal()" style="background:rgba(10,10,10,0.94);">
+<button class="fixed z-10 flex items-center justify-center rounded-full" onclick="cerrarLightboxAnimal()" style="top:20px; right:20px; width:44px; height:44px; background:rgba(255,255,255,0.15); color:#fff;"><i class="fa-solid fa-xmark text-xl"></i></button>
+<img decoding="async" id="lightbox-foto-grande" loading="lazy" src="" style="max-width:94vw; max-height:88vh; object-fit:contain; border-radius:12px;"/>
+</div>
+<div class="hidden fixed inset-0" id="fab-sheet" onclick="toggleFab()" style="background:rgba(33,30,25,0.4); z-index:105;"></div>
+<div class="hidden fixed bottom-24 right-5 bg-white rounded-3xl p-3 space-y-2 shadow-2xl" id="fab-menu" style="border:2px solid var(--line); min-width:230px; z-index:106;"></div>
+<button class="hidden fixed flex items-center justify-center rounded-full shadow-2xl transition-transform duration-150 hover:-translate-y-1 active:scale-90" id="fab-mas-productor" onclick="toggleFab()" style="right:20px; bottom:96px; width:64px; height:64px; background:var(--orange); color:#fff; font-size:1.6rem; border:none; z-index:110;">
+<i class="fa-solid fa-plus"></i>
+</button>
+<button class="hidden fixed flex items-center justify-center shadow-2xl transition-transform duration-150 hover:-translate-y-1 active:scale-90" id="btn-chat-flotante-productor" onclick="irA('mensajes')" style="right:22px; bottom:172px; width:52px; height:52px; background:#25D366; color:#fff; font-size:1.3rem; border:none; padding:0; border-radius:16px; z-index:110;">
+<span style="display:block; width:100%; height:100%; border-radius:16px; overflow:hidden; display:flex; align-items:center; justify-content:center; font-size:1.5rem;"><i class="fa-solid fa-hat-cowboy"></i></span>
+<span class="hidden flex items-center justify-center" id="badge-chat-productor" style="position:absolute; top:-6px; right:-6px; min-width:20px; height:20px; padding:0 4px; border-radius:999px; background:var(--red); color:#fff; font-size:.65rem; font-weight:800; align-items:center; justify-content:center; border:2px solid #fff; z-index:5;">0</span>
+</button>
+<nav class="fixed bottom-0 left-0 right-0 bg-white flex" id="navbar-productor" style="border-top:2px solid var(--line);"></nav>
+
+<!-- ---- SOLICITAR PRUEBA AL VETERINARIO (MODAL) ---- -->
+<div class="hidden" id="modal-solicitar-prueba" style="position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:80; align-items:flex-end;">
+<div class="w-full bg-white rounded-t-3xl p-5 space-y-3" style="max-height:88vh; overflow-y:auto;">
+<div class="flex items-center justify-between">
+<h3 class="font-display text-lg font-bold">Solicitud de prueba a mi veterinario</h3>
+<button onclick="document.getElementById('modal-solicitar-prueba').classList.add('hidden')" style="color:var(--sage);"><i class="fa-solid fa-xmark text-xl"></i></button>
+</div>
+<p class="text-xs" style="color:var(--sage);">Se compartirá tu inventario de animales vigentes (con y sin arete) para que tu veterinario planee la prueba.</p>
+<div>
+<label class="campo-label">Buscar veterinario</label>
+<input id="sp-buscar-vet" oninput="buscarVetParaSolicitudPrueba()" placeholder="Nombre del veterinario..." type="text"/>
+<div class="space-y-1 mt-1" id="resultado-buscar-vet-sp"></div>
+</div>
+<div class="hidden bg-white rounded-2xl p-3" id="vet-seleccionado-sp" style="border:2px solid var(--green);"></div>
+<p class="text-xs font-bold" id="sp-conteo-animales" style="color:var(--pine);"></p>
+<button class="w-full btn-primario-plano" onclick="enviarSolicitudPrueba()" style="background:var(--teal);">
+<i class="fa-solid fa-paper-plane"></i> Enviar solicitud
+</button>
+</div>
+</div>
+<!-- ============================================================ -->
+<!-- ============ APP ADMINISTRADOR ============ -->
+<!-- ============================================================ -->
+<div class="hidden min-h-screen flex flex-col" data-iranch-view-source="./iranch-modular/views/app-admin.html" id="app-admin"></div>
+<!-- ============================================================ -->
+<!-- ============ MODAL: EXPORTAR (CSV / Excel / PDF) ============ -->
+<!-- ============================================================ -->
+<div class="hidden flex items-end" id="modal-exportar" onclick="if(event.target===this) cerrarMenuExportar();" style="position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:60; align-items:flex-end;">
+<div class="bg-white w-full rounded-t-3xl p-5 space-y-3" style="border-top:2px solid var(--line);">
+<p class="font-display text-lg font-bold" data-i18n="elegir_formato">Elige el formato de exportación</p>
+<button class="w-full btn-primario-plano" onclick="ejecutarExportar('csv')" style="background:var(--parchment); color:var(--pine); border:2px solid var(--line);">
+<i class="fa-solid fa-file-csv"></i><span data-i18n="exportar_csv">CSV</span>
+</button>
+<button class="w-full btn-primario-plano" onclick="ejecutarExportar('excel')" style="background:var(--green);">
+<i class="fa-solid fa-file-excel"></i><span data-i18n="exportar_excel">Excel</span>
+</button>
+<button class="w-full btn-primario-plano" onclick="ejecutarExportar('pdf')" style="background:var(--red);">
+<i class="fa-solid fa-file-pdf"></i><span data-i18n="exportar_pdf">PDF</span>
+</button>
+<button class="w-full btn-primario-plano" onclick="compartirExportacionPorChat()" style="background:#25D366;">
+<i class="fa-brands fa-whatsapp"></i><span data-i18n="chat_flotante__enviar_por_chat">Enviar por chat (sin descargar)</span>
+</button>
+<button class="w-full text-center text-sm font-bold py-2" data-i18n="cancelar" onclick="cerrarMenuExportar()" style="color:var(--sage);">Cancelar</button>
+</div>
+</div>
+<!-- ============================================================ -->
+<!-- ============ MODAL: CONFLICTO DE ARETE ENTRE UPP ============ -->
+<!-- ============================================================ -->
+<div class="hidden flex items-center justify-center" id="modal-conflicto-arete" onclick="if(event.target===this) cerrarModalConflictoArete();" style="position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:65; align-items:center; justify-content:center; padding:1.5rem;">
+<div class="bg-white rounded-3xl p-5 space-y-3" style="max-width:380px;">
+<span class="w-14 h-14 rounded-2xl flex items-center justify-center mb-1" style="background:var(--orange); color:#fff; font-size:1.4rem;"><i class="fa-solid fa-triangle-exclamation"></i></span>
+<p class="font-display text-lg font-bold" data-i18n="modal_conflicto_arete__arete_ya_registrado">Arete ya registrado</p>
+<p class="text-sm" id="texto-conflicto-arete" style="color:var(--sage);"></p>
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full btn-primario-plano" onclick="solicitarTransferenciaArete()" style="background:var(--orange);">
+<i class="fa-solid fa-right-left"></i><span data-i18n="modal_conflicto_arete__solicitar_transferencia_de_registr">Solicitar Transferencia de Registro</span>
+</button>
+<button class="w-full text-center text-sm font-bold py-2" data-i18n="cancelar" onclick="cerrarModalConflictoArete()" style="color:var(--sage);">Cancelar</button>
+</div>
+</div>
+</div>
+<!-- ============================================================ -->
+<!-- ============ PANTALLA: GLOSARIO TÉCNICO (ES/EN/DE) ============ -->
+<!-- ============================================================ -->
+<div class="screen px-5 py-6 space-y-4" id="screen-glosario" style="display:none; background:var(--parchment); min-height:100vh;">
+<button class="btn-volver" onclick="cerrarGlosario()"><i class="fa-solid fa-arrow-left"></i> <span data-i18n="volver">Volver</span></button>
+<h2 class="font-display text-2xl font-bold" data-i18n="glosario_titulo">Glosario técnico ganadero</h2>
+<p class="text-sm" data-i18n="glosario_sub" style="color:var(--sage);">Términos clave usados en la app, en los tres idiomas.</p>
+<div class="space-y-3" id="lista-glosario"></div>
+</div>
+<!-- ============================================================ -->
+<!-- ============ MÓDULO: RECEPCIÓN DE LECHE (QUESERÍA) ============ -->
+<!-- ============================================================ -->
+<div class="hidden min-h-screen flex flex-col" data-iranch-view-source="./iranch-modular/views/app-quesera.html" id="app-quesera"></div>
+<!-- ============================================================ -->
+<!-- ============ FAB GLOBAL: COMANDOS DE VOZ ============ -->
+<!-- ============================================================ -->
+<!-- ---------- AVISO FIJO DE MODO DEMO ---------- -->
+<div class="hidden flex items-center" id="banner-modo-demo" style="position:fixed; top:0; left:0; right:0; z-index:9999; background:#7C3AED; color:#fff; padding:8px 14px; align-items:center; gap:8px; font-size:.78rem; font-weight:700; box-shadow:0 4px 10px rgba(0,0,0,0.25);">
+<i class="fa-solid fa-flask"></i>
+<span id="banner-modo-demo-texto" style="flex:1;">Modo demo</span>
+<button onclick="salirModoDemo()" style="background:rgba(255,255,255,0.2); border:none; color:#fff; font-weight:700; padding:5px 12px; border-radius:999px; font-size:.72rem;">Salir</button>
+</div>
+<button aria-label="Comando de voz — mantén presionado mientras hablas, suelta cuando termines" class="hidden flex items-center justify-center" id="fab-comando-voz" onmousedown="iniciarEscuchaContinua()" onmouseleave="detenerEscuchaContinua()" onmouseup="detenerEscuchaContinua()" ontouchcancel="detenerEscuchaContinua()" ontouchend="event.preventDefault(); detenerEscuchaContinua();" ontouchstart="event.preventDefault(); iniciarEscuchaContinua();" style="position:fixed; left:16px; bottom:78px; z-index:110; width:58px; height:58px; border-radius:999px; background:var(--pine); color:#fff; border:none; box-shadow:0 6px 18px rgba(0,0,0,0.35); align-items:center; justify-content:center; font-size:1.3rem; transition:background .2s ease, transform .15s ease; touch-action:none;">
+<span id="fab-voz-anillo" style="position:absolute; inset:-6px; border-radius:999px; border:3px solid var(--red); opacity:0; pointer-events:none;"></span>
+<span id="fab-voz-etiqueta" style="position:absolute; left:66px; bottom:8px; white-space:nowrap; background:var(--ink); color:#fff; font-size:0.72rem; font-weight:700; padding:4px 10px; border-radius:999px; box-shadow:0 3px 10px rgba(0,0,0,0.25); pointer-events:none; opacity:0; transform:translateX(-6px); transition:opacity .18s ease, transform .18s ease;">Toca y habla</span>
+<i class="fa-solid fa-microphone" id="fab-voz-icono"></i>
+</button>
+<!-- ---- Confirmación antes de guardar un comando de voz en segundo plano ---- -->
+<div class="hidden" id="modal-confirmar-voz" style="position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:109; align-items:flex-end;">
+<div class="w-full bg-white rounded-t-3xl p-5 space-y-3">
+<div class="flex items-center gap-2">
+<i class="fa-solid fa-microphone-lines text-2xl" style="color:var(--pine);"></i>
+<h3 class="font-display text-xl font-bold">¿Guardo esto?</h3>
+</div>
+<p class="font-bold" id="texto-confirmar-voz" style="color:var(--ink); font-size:1.35rem; line-height:1.3;"></p>
+<p class="text-xs italic rounded-xl px-3 py-2" id="texto-crudo-confirmar-voz" style="background:var(--parchment); color:var(--sage);"></p>
+<p class="text-xs" style="color:var(--sage);">Puedes decir "sí" o "no", o tocar un botón.</p>
+<div class="space-y-2 pt-2">
+<button onclick="responderConfirmacionVoz(true)" style="width:100%; min-height:56px; font-size:1.3rem; font-weight:800; border-radius:999px; background:var(--pine); color:#fff; border:none;" type="button"><i class="fa-solid fa-check"></i> SÍ, GUARDAR</button>
+<button class="text-sm font-bold py-3 rounded-full" onclick="responderConfirmacionVoz(false)" style="width:100%; background:var(--parchment); color:var(--red); border:2px solid var(--line);" type="button"><i class="fa-solid fa-xmark"></i> No, cancelar</button>
+</div>
+</div>
+</div>
+<style>
+@keyframes miranchapp-anillo-voz{
+0%{ transform:scale(0.9); opacity:.9; }
+70%{ transform:scale(1.35); opacity:0; }
+100%{ transform:scale(1.35); opacity:0; }
+}
+#fab-voz-anillo.escuchando{ animation:miranchapp-anillo-voz 1.1s ease-out infinite; opacity:1; }
+#fab-comando-voz.hidden{ display:none !important; }
+#banner-modo-demo.hidden{ display:none !important; }
+/* Estos 8 modales se abren con JavaScript poniéndoles style.display="flex"
+   directo — si el botón de cerrar solo quita la clase "hidden" sin limpiar
+   ese estilo, se quedan pegados en pantalla, como le pasó a Luis con la
+   solicitud de prueba al veterinario. Esta regla gana siempre, sin importar
+   qué le haya puesto JavaScript encima, así que no depende de que cada
+   botón de cerrar esté escrito perfecto. */
+#modal-asignar-medico-tb.hidden,
+#modal-confirmar-voz.hidden,
+#modal-hilo-mensajes.hidden,
+#modal-perfil-vet.hidden,
+#modal-recuperar-contrasena.hidden,
+#modal-registro-cuenta.hidden,
+#modal-selector-inventario.hidden,
+#modal-solicitar-prueba.hidden{ display:none !important; }
+/* Estos 2 elementos del modal de "dibujar el fierro" tienen "display:flex"
+   puesto directo en su style — un estilo así en línea le gana siempre a una
+   clase normal como .hidden, así que sin este empate a propósito, JS podía
+   quitarles/ponerles la clase "hidden" y de todos modos se seguían viendo,
+   mostrando el lienzo para dibujar y la vista previa AL MISMO TIEMPO. */
+#dibujo-fierro-vista-preview.hidden{ display:none !important; }
+#dibujo-fierro-botones-preview.hidden{ display:none !important; }
+.campo-con-error{ border-color:var(--red) !important; background:rgba(211,71,71,0.06) !important; }
+#fab-comando-voz.voz-escuchando{ background:var(--red); }
+#fab-comando-voz.voz-exito{ background:var(--green); }
+#fab-comando-voz.voz-error{ background:var(--slate); }
+#fab-comando-voz:active{ transform:scale(0.93); }
+/* Botón de voz apagado (gris) cuando no hay conexión — los comandos de voz
+   necesitan internet (Web Speech API manda el audio a servidor), así que en
+   vez de dejar que la persona hable y no pase nada, se avisa de una vez. */
+#fab-comando-voz.voz-sin-conexion{ background:#9CA3AF !important; opacity:0.75; }
+#fab-comando-voz.voz-sin-conexion #fab-voz-anillo{ display:none; }
+/* Tarjetas de resumen "solo lectura" del propietario en Nueva prueba — cuando
+   el dato ya viene guardado en la cuenta del productor se muestra fijo (gris
+   claro); cuando falta, se convierte en un campo editable para capturarlo ahí
+   mismo sin tener que ir a otra pantalla. */
+.resumen-tile{ background:var(--parchment); border-radius:10px; padding:6px 8px; }
+.resumen-tile-etiqueta{ font-size:9.5px; text-transform:uppercase; color:var(--sage); font-weight:bold; display:block; margin-bottom:1px; line-height:1.2; }
+.resumen-tile-valor{ font-size:12.5px; font-weight:bold; color:var(--ink); word-break:break-word; line-height:1.25; }
+.resumen-tile-vacio{ background:#fff; border:1.5px dashed var(--line); }
+.resumen-tile-input{ border:none !important; background:transparent !important; padding:0 !important; font-size:12.5px; font-weight:bold; width:100%; }
+.resumen-gps-badge{ display:flex; align-items:center; gap:6px; background:rgba(22,163,74,0.1); border:1.5px solid var(--green); border-radius:999px; padding:6px 12px; }
+/* Paleta de marca usada en genealogía, curva de lactancia, semen/pajillas y
+   clientes/recibos — mismos tonos tierra/verde de campo que el resto de la
+   app, solo que estas pantallas nuevas los usan tal cual. */
+:root{ --bg-verde:#4A7C59; --bg-cafe:#8B6F47; --bg-oscuro:#2D231A; --bg-crema:#FDF8EF; --bg-borde:#D9C7A8; --bg-tan:#EDE6D6; --bg-amarillo:#FFF3D6; }
+/* Árbol genealógico */
+.arbol-nodo{ background:#fff; border:2px solid var(--bg-borde); border-radius:12px; padding:8px 10px; text-align:center; display:flex; flex-direction:column; gap:2px; font-size:12px; }
+.arbol-nodo-vacio{ background:var(--bg-tan); border:1.5px dashed var(--bg-borde); color:var(--bg-cafe); font-size:11px; }
+.arbol-nodo small{ color:var(--bg-cafe); font-size:10px; }
+.arbol-nodo-padres{ background:var(--bg-amarillo); border:2px solid var(--bg-borde); }
+.arbol-nodo-central{ background:var(--bg-oscuro); border:1px solid var(--bg-oscuro); color:#fff; }
+.arbol-badge-sexo{ font-size:9px; font-weight:bold; padding:1px 7px; border-radius:999px; display:inline-block; margin-top:2px; }
+.arbol-badge-macho{ background:var(--bg-oscuro); color:#fff; }
+.arbol-badge-hembra{ background:var(--bg-verde); color:#fff; }
+</style>
+<!-- ============================================================ -->
+<!-- ============ WIDGET: MOO-NITOR (asistente flotante) ============ -->
+<!-- ============================================================ -->
+<div class="hidden" id="moonitor-widget" style="position:fixed; left:12px; right:12px; bottom:150px; z-index:90; max-width:480px; margin:0 auto; transition:transform .22s ease, opacity .22s ease; transform:translateY(14px); opacity:0;">
+<div class="rounded-2xl p-3 shadow-lg flex items-center gap-3" id="moonitor-burbuja" style="background:#fff; border:2px solid var(--line); position:relative;">
+<span class="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center" id="moonitor-icono" style="background:var(--parchment); color:var(--pine); font-size:1.1rem;"><i class="fa-solid fa-bell"></i></span>
+<p class="text-sm font-bold flex-1" id="moonitor-mensaje" style="color:var(--ink);"></p>
+<div class="flex gap-2 flex-shrink-0" id="moonitor-acciones"></div>
+<button class="flex-shrink-0" onclick="ocultarMoonitor()" style="position:absolute; top:-8px; right:-8px; width:22px; height:22px; border-radius:999px; background:var(--slate); color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 10px rgba(0,0,0,0.25);"><i class="fa-solid fa-xmark" style="font-size:.6rem;"></i></button>
+</div>
+</div>
+<!-- MiRanch: núcleo + módulos funcionales extraídos de app-core, en orden de dependencia -->
+<script src="./iranch-modular/modules/core/runtime.js"></script>
+<script src="./iranch-modular/modules/core/firebase-contract.js"></script>
+<script src="./iranch-modular/modules/core/i18n-data.js"></script>
+<script src="./iranch-modular/modules/core/state.js"></script>
+<script src="./iranch-modular/modules/core/date-utils.js"></script>
+<script src="./iranch-modular/modules/core/dom-utils.js"></script>
+<script src="./iranch-modular/modules/core/ui-feedback.js"></script>
+<script src="./iranch-modular/modules/app-core.js"></script>
+<script src="./iranch-modular/modules/core/i18n-export.js"></script>
+<script src="./iranch-modular/modules/core/local-demo-errors.js"></script>
+<script src="./iranch-modular/modules/core/account-auth.js"></script>
+<!-- MiRanch: motor de voz canónico. Se carga después de app-core. -->
+<script>
+// Registro del Service Worker (PWA) — así la app se puede "instalar" en el
+// celular y, de ahí en adelante, abre desde la copia guardada localmente en
+// vez de volver a descargar todo cada vez. Si el navegador no lo soporta
+// (algunos muy viejos), simplemente no pasa nada — la app sigue funcionando
+// igual que siempre, solo sin este beneficio extra.
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('./service-worker.js').catch((error) => {
+console.warn('No se pudo registrar el service worker (la app sigue funcionando normal, solo sin caché offline):', error);
+});
+});
+}
+</script>
+</body>
+</html>
